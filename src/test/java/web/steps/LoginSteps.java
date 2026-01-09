@@ -1,17 +1,19 @@
 package web.steps;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.Assert;
+import web.base.BaseTest;
+import web.pages.HomePage;
 import web.pages.LoginPage;
 
-public class LoginSteps {
+public class LoginSteps extends BaseTest {
 
-    ChromeDriver driver;
     LoginPage loginPage;
+    HomePage homePage;
 
     @Given("user open login page")
     public void openLoginPage() {
-        driver = new ChromeDriver();
+        setup();
         loginPage = new LoginPage(driver);
         loginPage.open();
     }
@@ -23,6 +25,8 @@ public class LoginSteps {
 
     @Then("user should see home page")
     public void verifyHomePage() {
-        driver.quit();
+        homePage = new HomePage(driver);
+        Assert.assertTrue(homePage.isInventoryDisplayed());
+        tearDown();
     }
 }
