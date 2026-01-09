@@ -17,6 +17,28 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
+/**
+ * DEFAULT TEST TASK
+ * Akan menjalankan semua test jika tidak difilter
+ */
 test {
     useJUnit()
+}
+
+/**
+ * TASK KHUSUS UNTUK API TEST
+ * Akan menjalankan cucumber scenario dengan tag @api saja
+ */
+task apiTest(type: Test) {
+    useJUnit()
+    systemProperty "cucumber.filter.tags", "@api"
+}
+
+/**
+ * TASK KHUSUS UNTUK WEB TEST
+ * Akan menjalankan cucumber scenario dengan tag @web saja
+ */
+task webTest(type: Test) {
+    useJUnit()
+    systemProperty "cucumber.filter.tags", "@web"
 }
