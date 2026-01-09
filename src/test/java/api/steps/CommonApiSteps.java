@@ -9,7 +9,6 @@ import static org.junit.Assert.assertEquals;
 
 public class CommonApiSteps {
 
-    // Response disimpan di context statis (simple & aman)
     public static Response response;
 
     @Given("API is ready")
