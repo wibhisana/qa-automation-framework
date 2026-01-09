@@ -1,12 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["id", "firstName", "lastName", "email"],
+
+  "required": ["id"],
+
   "properties": {
     "id": { "type": "string" },
-    "firstName": { "type": "string" },
-    "lastName": { "type": "string" },
-    "email": { "type": "string" },
-    "picture": { "type": "string" }
-  }
+    "title": { "type": ["string", "null"] },
+    "firstName": { "type": ["string", "null"] },
+    "lastName": { "type": ["string", "null"] },
+    "email": { "type": ["string", "null"] },
+    "picture": { "type": ["string", "null"] }
+  },
+
+  "additionalProperties": true
 }
