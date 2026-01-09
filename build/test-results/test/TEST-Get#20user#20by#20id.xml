@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Get user by id" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-09T08:52:36" hostname="Aigis-Megami.mshome.net" time="0.139">
+  <properties/>
+  <testcase name="Successfully get user data" classname="Get user by id" time="0.139"/>
+  <system-out><![CDATA[
+@api @optional
+Scenario: Successfully get user data                            ?[90m# src/test/resources/features/api/get_user.feature:4?[0m
+  ?[32mGiven ?[0m?[32mAPI is ready?[0m                                            ?[90m# api.steps.CommonApiSteps.apiIsReady()?[0m
+{
+    "error": "RESOURCE_NOT_FOUND"
+}
+  ?[32mWhen ?[0m?[32mI send request get user by id ?[0m?[32m?[1m"60d0fe4f5311236168a109ca"?[0m ?[90m# api.steps.UserSteps.getUserById(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mresponse status code should be ?[0m?[32m?[1m200?[0m                       ?[90m# api.steps.CommonApiSteps.verifyStatusCode(int)?[0m
+  ?[32mAnd ?[0m?[32mresponse body should contain valid user data?[0m              ?[90m# api.steps.UserSteps.validateResponseBody()?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
