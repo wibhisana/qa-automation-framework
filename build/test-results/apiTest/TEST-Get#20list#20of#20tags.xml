@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Get list of tags" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-09T09:08:10" hostname="Aigis-Megami.mshome.net" time="4.873">
+<testsuite name="Get list of tags" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-11T08:13:58" hostname="aigis-megami" time="5.036">
   <properties/>
-  <testcase name="Successfully get list of tags" classname="Get list of tags" time="4.873"/>
+  <testcase name="Successfully get list of tags" classname="Get list of tags" time="5.036"/>
   <system-out><![CDATA[
 @api
 Scenario: Successfully get list of tags    ?[90m# src/test/resources/features/api/get_tags.feature:4?[0m
