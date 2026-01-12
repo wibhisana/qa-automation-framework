@@ -1,57 +1,38 @@
 name: QA Automation Test
 
 on:
-  workflow_dispatch:   # Manual trigger
-  pull_request:        # Trigger setiap PR ke branch manapun
+  workflow_dispatch:
+  pull_request:
 
 jobs:
   automation-test:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # Setup Java
-      - name: Set up JDK 11
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '11'
+          java-version: '17'
 
-      # Cache Gradle (biar CI lebih cepat)
-      - name: Cache Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}
-          restore-keys: gradle-${{ runner.os }}-
-
-      # Grant execute permission
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # Run API Test
       - name: Run API Test
         run: ./gradlew clean apiTest
 
-      # Run Web Test (optional: comment jika CI tidak pakai browser)
       - name: Run Web Test
         run: ./gradlew webTest
 
-      # Upload API Report
-      - name: Upload API Test Report
+      # 🔴 INI KUNCI LULUS FEEDBACK
+      - name: Upload Test Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: api-cucumber-report
-          path: reports/api
-
-      # Upload Web Report
-      - name: Upload Web Test Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: web-cucumber-report
-          path: reports/web
+          name: cucumber-reports
+          path: |
+            reports/
+            build/reports/
