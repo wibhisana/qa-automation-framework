@@ -10,11 +10,11 @@ repositories {
 }
 
 dependencies {
-    // CUCUMBER 
+    // CUCUMBER
     testImplementation 'io.cucumber:cucumber-java:7.14.0'
     testImplementation 'io.cucumber:cucumber-junit:7.14.0'
 
-    // API 
+    // API
     testImplementation 'io.rest-assured:rest-assured:5.4.0'
 
     // WEB
@@ -29,32 +29,14 @@ test {
     useJUnit()
 }
 
-/**
- * API TEST TASK
- * Menjalankan semua scenario dengan tag @api
- * Report: HTML & JSON
- */
+// API TEST
 task apiTest(type: Test) {
     useJUnit()
-
-    systemProperty "cucumber.filter.tags", "@api"
-    systemProperty "cucumber.plugin",
-            "pretty," +
-            "html:reports/api/cucumber.html," +
-            "json:reports/api/cucumber.json"
+    include '**/ApiTestRunner.class'
 }
 
-/**
- * WEB TEST TASK
- * Menjalankan semua scenario dengan tag @web
- * Report: HTML & JSON
- */
+// WEB TEST
 task webTest(type: Test) {
     useJUnit()
-
-    systemProperty "cucumber.filter.tags", "@web"
-    systemProperty "cucumber.plugin",
-            "pretty," +
-            "html:reports/web/cucumber.html," +
-            "json:reports/web/cucumber.json"
+    include '**/WebTestRunner.class'
 }

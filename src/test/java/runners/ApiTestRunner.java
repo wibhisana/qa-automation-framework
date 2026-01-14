@@ -6,13 +6,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/api",
-        glue = {"api"},
-        plugin = {
-                "pretty",
-                "html:reports/api/cucumber.html",
-                "json:reports/api/cucumber.json"
-        }
+    features = "src/test/resources/features/api",
+    glue = {"api.steps"},
+    plugin = {
+        "pretty",
+        "html:reports/api/cucumber.html",
+        "json:reports/api/cucumber.json"
+    }
 )
 public class ApiTestRunner {
 }

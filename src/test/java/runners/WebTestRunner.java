@@ -6,13 +6,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/web",
-        glue = {"web"},
-        plugin = {
-                "pretty",
-                "html:reports/web/cucumber.html",
-                "json:reports/web/cucumber.json"
-        }
+    features = "src/test/resources/features/web",
+    glue = {"web.steps"},
+    plugin = {
+        "pretty",
+        "html:reports/web/cucumber.html",
+        "json:reports/web/cucumber.json"
+    }
 )
 public class WebTestRunner {
 }

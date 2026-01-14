@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Get list of tags" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-11T08:13:58" hostname="aigis-megami" time="5.036">
+<testsuite name="Get list of tags" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-01-14T14:27:05" hostname="aigis-megami" time="4.866">
   <properties/>
-  <testcase name="Successfully get list of tags" classname="Get list of tags" time="5.036"/>
+  <testcase name="Successfully get list of tags" classname="Get list of tags" time="4.866"/>
   <system-out><![CDATA[
 @api
 Scenario: Successfully get list of tags    ?[90m# src/test/resources/features/api/get_tags.feature:4?[0m
@@ -4134,6 +4134,7 @@ Scenario: Successfully get list of tags    ?[90m# src/test/resources/features/ap
         "grow",
         "growth",
         "grumpy",
+        "gsdgsgsdgsdg",
         "gsfghv",
         "gtaV",
         "gtr",
