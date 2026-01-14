@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login Swag Labs" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-01-14T16:08:20" hostname="aigis-megami" time="18.798">
+<testsuite name="Login Swag Labs" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-01-14T16:23:15" hostname="aigis-megami" time="22.858">
   <properties/>
-  <testcase name="Login success with standard_user" classname="Login Swag Labs" time="9.195"/>
-  <testcase name="Login failed with locked_out_user" classname="Login Swag Labs" time="4.816"/>
-  <testcase name="Login with problem_user shows broken images" classname="Login Swag Labs" time="4.779"/>
+  <testcase name="Login success with standard_user" classname="Login Swag Labs" time="13.201"/>
+  <testcase name="Login failed with locked_out_user" classname="Login Swag Labs" time="4.724"/>
+  <testcase name="Login with problem_user shows broken images" classname="Login Swag Labs" time="4.932"/>
   <system-out><![CDATA[
 @web
 Scenario: Login success with standard_user                                  ?[90m# src/test/resources/features/web/login.feature:4?[0m
@@ -26,17 +26,17 @@ Scenario: Login with problem_user shows broken images                      ?[90m
   <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Jan 14, 2026 11:08:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jan 14, 2026 11:23:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-Jan 14, 2026 11:08:26 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jan 14, 2026 11:23:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.135. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Jan 14, 2026 11:08:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jan 14, 2026 11:23:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-Jan 14, 2026 11:08:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jan 14, 2026 11:23:30 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.135. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-Jan 14, 2026 11:08:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jan 14, 2026 11:23:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 142
-Jan 14, 2026 11:08:36 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Jan 14, 2026 11:23:35 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 142.0.7444.135. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

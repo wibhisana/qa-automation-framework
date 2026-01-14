@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.935" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="Login Swag Labs" name="Login success with standard_user" time="9.083">
+<testsuite name="Cucumber" time="22.986" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Login Swag Labs" name="Login success with standard_user" time="13.103">
 <system-out><![CDATA[
 Given user open login page..................................................passed
 When user login with username "standard_user" and password "secret_sauce"...passed
 Then user should see product page...........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Swag Labs" name="Login failed with locked_out_user" time="4.808">
+<testcase classname="Login Swag Labs" name="Login failed with locked_out_user" time="4.717">
 <system-out><![CDATA[
 Given user open login page..................................................passed
 When user login with username "locked_out_user" and password "secret_sauce".passed
 Then error message "Epic sadface: Sorry, this user has been locked out." should be displayed.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Swag Labs" name="Login with problem_user shows broken images" time="4.775">
+<testcase classname="Login Swag Labs" name="Login with problem_user shows broken images" time="4.927">
 <system-out><![CDATA[
 Given user open login page..................................................passed
 When user login with username "problem_user" and password "secret_sauce"....passed
