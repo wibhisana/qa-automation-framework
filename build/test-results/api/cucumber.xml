@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="25.322" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Get list of tags" name="Successfully get list of tags" time="4.912">
+<system-out><![CDATA[
+Given API is ready..........................................................passed
+When I send request to get list of tags.....................................passed
+Then response status code should be 200.....................................passed
+And response should contain list of tags....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User CRUD" name="Create, update and delete user" time="20.208">
+<system-out><![CDATA[
+Given API is ready..........................................................passed
+When I create a new user....................................................passed
+Then response status code should be 200.....................................passed
+And user id should be returned..............................................passed
+When I update the user first name to "UpdatedName"..........................passed
+When I delete the user......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

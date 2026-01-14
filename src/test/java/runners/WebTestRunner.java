@@ -11,7 +11,8 @@ import io.cucumber.junit.CucumberOptions;
     plugin = {
         "pretty",
         "html:reports/web/cucumber.html",
-        "json:reports/web/cucumber.json"
+        "json:reports/web/cucumber.json",
+        "junit:build/test-results/web/cucumber.xml"
     }
 )
 public class WebTestRunner {
