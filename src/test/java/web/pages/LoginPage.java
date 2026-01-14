@@ -7,9 +7,10 @@ public class LoginPage {
 
     WebDriver driver;
 
-    By username = By.id("user-name");
-    By password = By.id("password");
-    By loginButton = By.id("login-button");
+    private By username = By.id("user-name");
+    private By password = By.id("password");
+    private By loginButton = By.id("login-button");
+    private By errorMessage = By.cssSelector("h3[data-test='error']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -20,8 +21,16 @@ public class LoginPage {
     }
 
     public void login(String user, String pass) {
+        driver.findElement(username).clear();
         driver.findElement(username).sendKeys(user);
+
+        driver.findElement(password).clear();
         driver.findElement(password).sendKeys(pass);
+
         driver.findElement(loginButton).click();
+    }
+
+    public String getErrorMessage() {
+        return driver.findElement(errorMessage).getText();
     }
 }
